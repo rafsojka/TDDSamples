@@ -6,20 +6,6 @@ using System.Threading.Tasks;
 
 namespace SystemUnderTest
 {
-    public interface IPriceGenerator
-    {
-        int GeneratePrice();
-    }
-
-    public class PriceGenerator : IPriceGenerator
-    {
-        public int GeneratePrice()
-        {
-            var rnd = new Random();
-            return rnd.Next(-100, 150);
-        }
-    }
-
     public class ClassWithDependency
     {
         private IPriceGenerator priceGenerator;
@@ -31,7 +17,8 @@ namespace SystemUnderTest
 
         public bool VerifyPrice()
         {
-            return (priceGenerator.GeneratePrice() > 0 && priceGenerator.GeneratePrice() <= 100);
+            var price = priceGenerator.GeneratePrice();
+            return (price > 0 && price <= 100);
         }
     }
 }

@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassRaisingEventTests.cs" />
     <Compile Include="ClassWithDependencyTests.cs" />
     <Compile Include="SimpleClassTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

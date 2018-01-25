@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassRaisingEvent.cs" />
     <Compile Include="ClassWithDependency.cs" />
+    <Compile Include="PriceGenerator.cs" />
     <Compile Include="SimpleClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
